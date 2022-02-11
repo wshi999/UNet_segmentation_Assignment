@@ -22,7 +22,7 @@ testset = Cell_data(data_dir=data_dir, size=image_size, train=False)
 testloader = DataLoader(testset, batch_size=4)
 
 model = UNet()
-model.load_state_dict(torch.load("best.pt"))
+model.load_state_dict(torch.load("checkpoint.pt"))
 model.to("cuda:0")
 model.eval()
 
